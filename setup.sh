@@ -3,11 +3,11 @@
 
 initialize()
 {
-  export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"
-  export CVS_RSH="ssh"
-  pkgsrc_tag=2012Q4
+  netbsd_src_ver=6.1.4
+  netbsd_src_uri=ftp://ftp4.jp.netbsd.org/pub/NetBSD/NetBSD-${netbsd_src_ver}/source/sets/
+  pkgsrc_uri=ftp://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz
+
   pkgsrc_dir=/usr/pkgsrc
-  netbsd_tag=netbsd-6-0-RELEASE
   hostname=madoka
   domain=example.jp
   ip_addr=192.168.0.10
@@ -29,7 +29,7 @@ rc_conf()
 cat << EOT >> /etc/rc.conf
 
 wscons=yes
-defaultroute=192.168.0.1
+defaultroute=${defaultroute}
 hostname=${hostname}.${domain}
 sshd=yes
 apache=yes
@@ -90,21 +90,20 @@ X11_TYPE=modular
 EOT
 }
 
-
-
-
 src_get()
 {
   cd /usr
-  cvs checkout -r ${netbsd_tag} -P src
-#  cvs checkout -P src
+  ftp -i ${netbsd_src_uri} <<EOS
+  mget *
+EOS
 }
 
 pkg_get()
 {
   cd /usr
-  cvs -q -z2 -d anoncvs@anoncvs.NetBSD.org:/cvsroot checkout -r pkgsrc-${pkgsrc_tag} -P pkgsrc
-#  cvs checkout -P pkgsrc
+  ftp -i ${pkgsrc_uri} <<EOS
+  mget *
+EOS
 }
 
 pkg_install()
@@ -190,7 +189,6 @@ main()
   pkg_install $@
   rubygems_install $@
 }
-
 
 main $@
 
