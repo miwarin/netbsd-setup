@@ -115,7 +115,7 @@ pkg_install()
   devel/subversion
   devel/scmgit
   editors/vim
-  lang/ruby193-base
+  lang/ruby
   lang/python33
   lang/perl5
   misc/lv
@@ -126,11 +126,13 @@ pkg_install()
   net/wget
   net/rsync
   net/djbdns
+  net/djbdns-run
   pkgtools/url2pkg
   pkgtools/pkglint
   pkgtools/port2pkg
   pkgtools/pkg_chk
   shells/zsh
+  security/py-denyhosts/
   security/sudo
   shells/zsh
   www/apache24

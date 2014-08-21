@@ -46,11 +46,13 @@ namespace :package do
       net/wget
       net/rsync
       net/djbdns
+      net/djbdns-run
       pkgtools/url2pkg
       pkgtools/pkglint
       pkgtools/port2pkg
       pkgtools/pkg_chk
       shells/zsh
+      security/py-denyhosts/
       security/sudo
       shells/zsh
       www/apache2

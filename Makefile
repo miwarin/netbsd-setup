@@ -34,9 +34,9 @@ _PACKAGES+=  editors/vim
 _PACKAGES+=  lang/ruby193-base  lang/python33  lang/perl5
 _PACKAGES+=  misc/lv  misc/rubygems  misc/screen
 _PACKAGES+=  mail/quickml  mail/postfix
-_PACKAGES+=  net/wget  net/rsync  net/djbdns
+_PACKAGES+=  net/wget  net/rsync  net/djbdns net/djbdns-run
 _PACKAGES+=  pkgtools/url2pkg  pkgtools/pkglint  pkgtools/port2pkg  pkgtools/pkg_chk
-_PACKAGES+=  shells/zsh security/sudo
+_PACKAGES+=  shells/zsh security/sudo security/py-denyhosts/
 _PACKAGES+=  www/apache24  www/w3m
 
 
