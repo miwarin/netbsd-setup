@@ -1,8 +1,10 @@
 #!/bin/sh
 
+progname=${0##*/}
 
 initialize()
 {
+  
   netbsd_src_ver=6.1.4
   netbsd_src_uri=ftp://ftp4.jp.netbsd.org/pub/NetBSD/NetBSD-${netbsd_src_ver}/source/sets/
   pkgsrc_uri=ftp://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz
@@ -178,18 +180,68 @@ rubygems_install()
   
 }
 
+usage()
+{
+  cat << _usage_
+Usage: ${progname} operation [...]
+
+operations:
+  user_add          Run useradd
+  rc_conf           Create /etc/rc.conf
+  rc_ifconfig       Create /etc/rc.ifconfig
+  rc_resolv_conf    Create /etc/resolv.conf
+  src_get           Download NetBSD src
+  pkg_get           Download pkgsrc
+  pkg_install       Install pkgsrc
+  rubygems_install  Install rubygems
+_usage_
+  exit 1
+}
 
 main()
 {
   initialize $@
-  user_add $@
-  rc_conf $@
-  rc_ifconfig $@
-  rc_resolv_conf $@
-  src_get $@
-  pkg_get $@
-  pkg_install $@
-  rubygems_install $@
+  
+  for op in $@; do
+    case "${op}" in
+    user_add)
+      user_add $@
+      ;;
+    
+    rc_conf)
+      rc_conf $@
+      ;;
+
+    rc_ifconfig)
+      rc_ifconfig $@
+      ;;
+
+    rc_resolv_conf)
+      rc_resolv_conf $@
+      ;;
+      
+    src_get)
+      src_get $@
+      ;;
+      
+    pkg_get)
+      pkg_get $@
+      ;;
+
+    pkg_install)
+      pkg_install $@
+      ;;
+      
+    rubygems_install)
+      rubygems_install $@
+      ;;
+
+    *)
+      usage
+      ;;
+      
+    esac
+  done
 }
 
 main $@
