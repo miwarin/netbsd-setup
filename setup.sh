@@ -136,6 +136,7 @@ pkg_install()
   shells/zsh
   www/apache24
   security/fail2ban
+  misc/gnuls
   "
   
   for p in $pkgs; do
