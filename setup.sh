@@ -119,6 +119,7 @@ pkg_install()
   lang/ruby
   lang/python35
   lang/perl5
+  lang/go
   misc/lv
   mail/quickml
   mail/postfix
