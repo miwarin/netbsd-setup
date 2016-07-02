@@ -53,6 +53,7 @@ winbindd=no
 samba=no
 munin_node=no
 denyhosts=no
+fail2ban=yes
 
 EOT
 
@@ -116,7 +117,7 @@ pkg_install()
   devel/git
   editors/vim
   lang/ruby
-  lang/python34
+  lang/python35
   lang/perl5
   misc/lv
   mail/quickml
@@ -134,6 +135,7 @@ pkg_install()
   security/sudo
   shells/zsh
   www/apache24
+  security/fail2ban
   "
   
   for p in $pkgs; do
