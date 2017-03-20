@@ -53,6 +53,7 @@ winbindd=no
 samba=no
 munin_node=no
 denyhosts=no
+fail2ban=yes
 
 EOT
 
@@ -113,11 +114,19 @@ pkg_install()
   pkgs="
   converters/nkf
   devel/bmake
+<<<<<<< HEAD
   devel/scmgit
   editors/vim
   lang/ruby
   lang/python34
+=======
+  devel/git
+  editors/vim
+  lang/ruby
+  lang/python35
+>>>>>>> origin/master
   lang/perl5
+  lang/go
   misc/lv
   mail/quickml
   mail/postfix
@@ -134,6 +143,8 @@ pkg_install()
   security/sudo
   shells/zsh
   www/apache24
+  security/fail2ban
+  misc/gnuls
   "
   
   for p in $pkgs; do
