@@ -114,17 +114,10 @@ pkg_install()
   pkgs="
   converters/nkf
   devel/bmake
-<<<<<<< HEAD
-  devel/scmgit
-  editors/vim
-  lang/ruby
-  lang/python34
-=======
   devel/git
   editors/vim
   lang/ruby
   lang/python35
->>>>>>> origin/master
   lang/perl5
   lang/go
   misc/lv
