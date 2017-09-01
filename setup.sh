@@ -117,11 +117,7 @@ pkg_install()
   devel/git
   editors/vim
   lang/ruby
-<<<<<<< HEAD
   lang/python
-=======
-  lang/python35
->>>>>>> origin/master
   lang/perl5
   lang/go
   misc/lv
@@ -140,10 +136,7 @@ pkg_install()
   security/sudo
   shells/zsh
   www/apache24
-<<<<<<< HEAD
-=======
   security/fail2ban
->>>>>>> origin/master
   misc/gnuls
   "
   
