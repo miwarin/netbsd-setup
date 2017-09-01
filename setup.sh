@@ -113,16 +113,12 @@ pkg_install()
   pkgs="
   converters/nkf
   devel/bmake
-  devel/mercurial
-  devel/subversion
-  devel/scmgit
+  devel/git
   editors/vim
   lang/ruby
-  lang/python33
+  lang/python
   lang/perl5
   misc/lv
-  misc/rubygems
-  misc/screen
   mail/quickml
   mail/postfix
   net/wget
@@ -138,6 +134,7 @@ pkg_install()
   security/sudo
   shells/zsh
   www/apache24
+  misc/gnuls
   "
   
   for p in $pkgs; do
