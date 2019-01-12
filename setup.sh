@@ -121,22 +121,22 @@ pkg_install()
   lang/perl5
   lang/go
   misc/lv
-  mail/quickml
-  mail/postfix
-  net/wget
+#  mail/quickml
+#  mail/postfix
+#  net/wget
+  www/curl
   net/rsync
-  net/djbdns
-  net/djbdns-run
+#  net/djbdns
+#  net/djbdns-run
   pkgtools/url2pkg
   pkgtools/pkglint
   pkgtools/port2pkg
   pkgtools/pkg_chk
   shells/zsh
-  security/py-denyhosts/
+#  security/py-denyhosts/
   security/sudo
-  shells/zsh
-  www/apache24
-  security/fail2ban
+#  www/apache24
+#  security/fail2ban
   misc/gnuls
   "
   
