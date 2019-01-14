@@ -137,6 +137,7 @@ pkg_install()
   security/sudo
 #  www/apache24
 #  security/fail2ban
+  sysutils/pv
   misc/gnuls
   "
   
