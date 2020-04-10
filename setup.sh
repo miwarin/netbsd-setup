@@ -139,6 +139,7 @@ pkg_install()
 #  security/fail2ban
   sysutils/pv
   misc/gnuls
+  security/mozilla-rootcerts
   "
   
   for p in $pkgs; do
